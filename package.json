@@ -4,15 +4,8 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    
-    "bootstrap-sass": "^3.3.6",
-    
-=======
 
     "bootstrap-sass": "^3.3.6",
-
->>>>>>> a11c55ee7328f83713a1eac80566aa341d560dfb
     "git-directory-deploy": "^1.4.0",
     "autoprefixer": "^6.3.3",
     "browserify-shim": "^3.8.12",
@@ -48,11 +41,8 @@
     "build:images": "npm run imagemin && npm run favicon",
     "build": "npm run html && npm run build:css && npm run build:js && npm run build:images",
 
-<<<<<<< HEAD
-    "deploy": "npm run build && git-directory-deploy",
-=======
+
     "deploy": "npm run build && git-directory-deploy --directory dist/",
->>>>>>> a11c55ee7328f83713a1eac80566aa341d560dfb
 
     "watch:scss": "sass --watch app/styles:dist/css",
     "watch:js": "watchify app/scripts/index.js -o dist/js/bundle.js",
