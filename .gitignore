@@ -2,4 +2,7 @@ node_modules
 .tmp
 .sass-cache
 .DS_Store
+<<<<<<< HEAD
 dist/
+=======
+>>>>>>> a11c55ee7328f83713a1eac80566aa341d560dfb
