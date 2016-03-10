@@ -1,5 +1,15 @@
 var Backbone = require('backbone');
 
-var contact = Backbone.Model.extend({});
+var Contact = Backbone.Model.extend({
 
-var contactCollections = Backbone.Collections.extend({});
+});
+
+var ContactCollection = Backbone.Collection.extend({
+  model: Contact
+});
+
+module.exports = {
+  'contact': Contact,
+  'contactCollection': ContactCollection
+}
+// Status API Training Shop Blog About Pricing

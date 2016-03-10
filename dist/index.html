@@ -3,14 +3,70 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>6 3 backbone views</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <h1>Todo List</h1>
+
+    <div id="container" class="container"></div>
+    <div class="form-group">
+        <label for="usr">Email:</label>
+        <input type="text" class="form-control" id="usr">
+    </div>
+    <script id="contact-item" type="text/x-handlebars-template">
+        <li>
+          {{this.task}}::
+          <a class="clickMe" href="#">
+            {{#if this.completed}}
+              Completed!
+            {{else}}
+              Pending
+            {{/if}}
+          </a>
+        </li>
+    </script>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
+
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>IY 6 5 Contact</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
 
-    <h1>This is Erik's</h1>
 
-    <h3>This is Joshua</h3>
+
+    <div class="form-group">
+        <label for="usr">Email:</label>
+        <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Name:</label>
+        <input type="text" class="form-control" id="pwd">
+      </div>
+
+      <div class="form-group">
+        <label for="usr">Phone Number:</label>
+        <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Username:</label>
+        <input type="text" class="form-control" id="pwd">
+      </div>
+
+      <button class="btn btn-default submit">Submit</button>
+
+
+
     <script src="js/bundle.js"></script>
   </body>
-</html>
+</html> -->
