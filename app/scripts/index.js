@@ -1,4 +1,5 @@
 var $ = require('jquery');
+var Backbone = require('backbone');
 
 var views = require('./views/views');
 var models = require('./models/models');
@@ -8,15 +9,10 @@ $(function(){
   // Setup app
   var contact = new models.contactCollection();//collection
   var contactList = new views.ContactItemView({collection: contact}); //
-  var formGroup = $('.form-group')[0];
+  var contactView = new views.ContactFormView({collection: contact})
 
-  // $('.submit').click(function(e){
-  //     e.preventDefault;
-  //     this.$el.html(this.template(this.model.toJSON()));
-  //     // return this;
-  // })
-  console.log(formGroup)
+
   // Render
-  $('#container').html(contactList.render().el);
-
+  $('#container').html(contactView.render().el)
+                 .append(contactList.render().el);
 })
