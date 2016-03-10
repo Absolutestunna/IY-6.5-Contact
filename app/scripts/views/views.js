@@ -12,25 +12,26 @@ var ContactListView = Backbone.View.extend({
     return this;
   },
   rendercontactItem: function(contact){
-    var view = new ContactItemView({ model: contact });
+    // var view = new ContactItemView({ model: contact });
 		this.$el.append(view.render().el);
   }
 });
 
 // Individual Item View
 var ContactItemView = Backbone.View.extend({
-  template: handlebars.compile($('#contact-item').html()),
+  template: handlebars.compile($('#contact-item').html())
   events: {
-    "click .submit": "processForm",
+    "click .submit": "complete"
     // "dblclick .clickMe": "doubleTime"
   },
 
-  // render: function(){
-  //   this.$el.html(this.template(this.model.toJSON()));
-  //   return this;
-  // },
-  processForm: function(e){
+  render: function(){
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
+  },
+  complete: function(e){
     e.preventDefault;
+    console.log("spartan");
     this.$el.html(this.template(this.model.toJSON()));
     return this;
 
@@ -40,5 +41,5 @@ var ContactItemView = Backbone.View.extend({
 
 module.exports = {
   'ContactListView': ContactListView,
-  'TContactItemView': ContactItemView
+  'ContactItemView': ContactItemView
 };

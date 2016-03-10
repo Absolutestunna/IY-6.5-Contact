@@ -6,17 +6,17 @@ var models = require('./models/models');
 
 $(function(){
   // Setup app
-  var contact = new models.contactCollection();
-  var contactList = new views.ContactListView({collection: contact}); //
+  var contact = new models.contactCollection();//collection
+  var contactList = new views.ContactItemView({collection: contact}); //
   var formGroup = $('.form-group')[0];
+
+  // $('.submit').click(function(e){
+  //     e.preventDefault;
+  //     this.$el.html(this.template(this.model.toJSON()));
+  //     // return this;
+  // })
+  console.log(formGroup)
   // Render
   $('#container').html(contactList.render().el);
 
-
-
-  // // Simulate a fetch
-  // contact.add([
-  //   {'task': 'Learn Backbone Views', 'completed': false},
-  //   {'task': 'Hook up view to model with events', 'completed': false}
-  // ]);
 })
